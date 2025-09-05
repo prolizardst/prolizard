@@ -7,9 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
       body {
@@ -23,22 +28,6 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-      }
-      .nav-link {
-        position: relative;
-      }
-      .nav-link:after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -2px;
-        left: 0;
-        background-color: #00ced1;
-        transition: width 0.3s ease;
-      }
-      .nav-link:hover:after {
-        width: 100%;
       }
 
       .hover-facebook:hover {
@@ -66,483 +55,116 @@
       }
     </style>
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <header class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <nav class="teal-gradient text-white py-4 px-6 rounded-full shadow-lg flex items-center justify-between">
-          <div class="flex items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-              <img src="./static/logopng092025.png" alt="Logo de Prolizard SpA" class="h-20 w-15" />
-              <span class="text-xl font-bold text-white">PROLIZARD SpA</span>
-            </a>
-          </div>
-          <ul class="hidden md:flex space-x-8 text-white">
-            <li>
-              <a href="#valores" class="hover:text-cyan-200 transition duration-300">
-                Nuestros Valores
-              </a>
-            </li>
-            <li>
-              <a href="#servicios" class="hover:text-cyan-200 transition duration-300">
-                Servicios
-              </a>
-            </li>
-            <li>
-              <a href="#galeria" class="hover:text-cyan-200 transition duration-300">
-                Galería
-              </a>
-            </li>
-            <li>
-              <a href="#contacto" class="hover:text-cyan-200 transition duration-300">
-                Contacto
-              </a>
-            </li>
-          </ul>
-          <div class="hidden md:block relative group">
-              <span
-                class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"
-              ></span>
-              <a
-                href="https://wa.me/56979656543?text=Hola,%20quisiera%20pedir%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20de%20emergencia."
-                class="relative inline-block bg-yellow-500 text-white font-bold py-2 px-4 rounded-full transition transform duration-300 hover:-translate-y-2"
-              >
-                ¡EMERGENCIAS!
-              </a>
-            </div>
-          <button id="menu-toggle" class="md:hidden">
-            <i data-feather="menu" class="h-6 w-6 text-black"></i>
-          </button>
-        </nav>
-        <div class="mt-16 text-center" data-aos="fade-up">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-prolizardDark mb-4"><br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-lime-400">
-              Servicios Profesionales de Ingeniería, Tecnología y Electricidad.
-            </span>
-            <p>
-              <br />
-            </p>
+      <div class="max-w-7xl mx-auto text-center">
+        <a href="main.html" class="flex flex-col items-center space-y-4">
+          <img
+            src="static/logopng092025.png"
+            alt="Logo de Prolizard SpA"
+            class="h-48 w-auto"
+          />
+          <h1
+            class="text-6xl font-extrabold text-[#013939] font-['Montserrat']"
+          >
+            PROLIZARD SpA
           </h1>
-          <p class="text-prolizardDark/80 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
-            Somos una empresa de Ingeniería y Tecnología que ofrece soluciones integrales de vanguardia en la Región de Coquimbo. Nos enfocamos en satisfacer las necesidades de condominios, pymes, edificios y grandes organizaciones, brindando servicios profesionales con un compromiso total con la calidad, la eficiencia y la seguridad.
-          </p>
-            <p>
-              <br />
-            </p>
-          <div class="relative group inline-block">
-              <span
-                class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"
-              ></span>
-              <a
-                href="./cotizacion.html"
-                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2 group-hover:text-gray-200"
-              >
-                Si deseas más información o una cotización , solo dejanos un mensaje!! 
-              </a>
-            </div>
-        </div>
+        </a>
       </div>
     </header>
-    <section id="seccion-anterior"></section>
 
-    <hr />
-
-    <section id="seccion-siguiente"></section>
-    <section id="seccion-anterior"></section>
-
-    <div class="border-t border-gray-300 my-12"></div>
-
-    <section id="seccion-siguiente"></section>
-    <section id="valores" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-center text-3xl font-bold text-gray-800 mb-12"
-          data-aos="fade-up"
-        >
-          Nuestros Valores
-        </h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="relative group" data-aos="fade-right">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative bg-white rounded-xl shadow-lg p-8 transition transform duration-300 hover:-translate-y-2">
-              <h3 class="text-2xl font-bold mb-4 text-prolizardDark">Misión</h3>
-              <p class="text-gray-600">
-                Ser una empresa líder en ingeniería y tecnología en la Región de
-                Coquimbo, reconocida por nuestra excelencia operativa, innovación y
-                compromiso con el desarrollo sostenible.
-              </p>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-left">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative bg-white rounded-xl shadow-lg p-8 transition transform duration-300 hover:-translate-y-2">
-              <h3 class="text-2xl font-bold mb-4 text-prolizardDark">Visión</h3>
-              <p class="text-gray-600">
-                Nos esforzamos por crear un futuro donde la tecnología y la
-                ingeniería converjan para ofrecer soluciones que no solo satisfagan
-                las necesidades actuales, sino que también anticipen las futuras.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="servicios" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-center text-3xl font-bold text-gray-800 mb-12"
-          data-aos="fade-up"
-        >
-          Nuestra experiencia se centra en los siguientes servicios
-        </h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="relative group" data-aos="fade-up">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative bg-white service-card p-6 rounded-xl transition transform duration-300 hover:-translate-y-2">
-              <div
-                class="bg-primary/10 p-4 rounded-full w-14 h-14 flex items-center justify-center mb-6"
-              >
-                <i data-feather="zap" class="text-primary w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3">
-                Ingeniería y Electricidad
-              </h3>
-              <p class="text-gray-600 text-sm">
-                Soluciones integrales en sistemas eléctricos, desde diseño hasta
-                implementación y mantenimiento, garantizando seguridad y
-                eficiencia energética.
-              </p>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative bg-white service-card p-6 rounded-xl transition transform duration-300 hover:-translate-y-2">
-              <div
-                class="bg-secondary/10 p-4 rounded-full w-14 h-14 flex items-center justify-center mb-6"
-              >
-                <i data-feather="cpu" class="text-secondary w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3">
-                Tecnología de la Información (TI)
-              </h3>
-              <p class="text-gray-600 text-sm">
-                Implementación y mantenimiento de infraestructura tecnológica,
-                redes, seguridad informática y sistemas de comunicación avanzados.
-              </p>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="200">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative bg-white service-card p-6 rounded-xl transition transform duration-300 hover:-translate-y-2">
-              <div
-                class="bg-accent/10 p-4 rounded-full w-14 h-14 flex items-center justify-center mb-6"
-              >
-                <i data-feather="truck" class="text-accent w-6 h-6"></i>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3">
-                Logística y Operaciones
-              </h3>
-              <p class="text-gray-600 text-sm">
-                Gestión eficiente de recursos y operaciones, optimizando procesos
-                para garantizar la entrega oportuna y de calidad de nuestros
-                servicios.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-center text-3xl font-bold text-gray-800 mb-12"
-          data-aos="fade-up"
-        >
-          Nuestros Servicios Especializados
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-            <div class="relative bg-gray-50 p-5 rounded-lg border border-gray-200 transition transform duration-300 hover:-translate-y-2">
-              <div class="flex items-center">
-                <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
-                </div>
-                <h3 class="font-medium text-gray-800 text-sm">
-                  Instalaciones, soporte y mantenciones de TI
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="50">
-            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-            <div class="relative bg-gray-50 p-5 rounded-lg border border-gray-200 transition transform duration-300 hover:-translate-y-2">
-              <div class="flex items-center">
-                <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
-                </div>
-                <h3 class="font-medium text-gray-800 text-sm">
-                  Instalaciones, soporte y mantenciones de CCTV
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="100">
-            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-            <div class="relative bg-gray-50 p-5 rounded-lg border border-gray-200 transition transform duration-300 hover:-translate-y-2">
-              <div class="flex items-center">
-                <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
-                </div>
-                <h3 class="font-medium text-gray-800 text-sm">
-                  Instalaciones, soporte y mantenciones de Cercos eléctricos
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="150">
-            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-            <div class="relative bg-gray-50 p-5 rounded-lg border border-gray-200 transition transform duration-300 hover:-translate-y-2">
-              <div class="flex items-center">
-                <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
-                </div>
-                <h3 class="font-medium text-gray-800 text-sm">
-                  Instalaciones, soporte y mantenciones de Circuitos eléctricos
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="200">
-            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-            <div class="relative bg-gray-50 p-5 rounded-lg border border-gray-200 transition transform duration-300 hover:-translate-y-2">
-              <div class="flex items-center">
-                <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
-                </div>
-                <h3 class="font-medium text-gray-800 text-sm">
-                  Instalaciones, soporte y mantenciones de Portones eléctricos
-                  
-                </h3>
-              </div>
-          </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="250">
-            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-            <div class="relative bg-gray-50 p-5 rounded-lg border border-gray-200 transition transform duration-300 hover:-translate-y-2">
-              <div class="flex items-center">
-                <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
-                </div>
-                <h3 class="font-medium text-gray-800 text-sm">
-                  Mantenciones de ascensores
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="galeria" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-center text-3xl font-bold text-gray-800 mb-12"
-          data-aos="fade-up"
-        >
-          Nuestros Trabajos
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <main class="flex-grow container mx-auto px-4 py-8 max-w-4xl">
+      <section id="nuestra-promesa" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="text-center text-3xl font-bold text-gray-800 mb-12"
+            data-aos="fade-up"
+          >
+            Nuestra Promesa
+          </h2>
           <div class="relative group" data-aos="fade-up">
             <div
               class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"
             ></div>
-            <div class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2">
-              <img
-                src="./static/electricidad.png"
-                alt="Instalación Eléctrica"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Instalación Eléctrica</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Sistema eléctrico completo para edificio comercial
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="100">
             <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2">
-              <img
-                src="./static/cctv.png"
-                alt="Sistema CCTV"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Sistema CCTV</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Implementación de seguridad para complejo residencial
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="200">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2">
-              <img
-                src="./static/redes.png"
-                alt="Redes Informáticas"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Redes Informáticas</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Infraestructura de red para empresa tecnológica
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="300">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2">
-              <img
-                src="./static/portones.png"
-                alt="Portón Automático"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Portón Automático</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Instalación de sistema automatizado para condominio
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="400">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2">
-              <img
-                src="./static/asensores.png"
-                alt="Mantención Ascensor"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Mantención Ascensor</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Servicio de mantención preventiva para edificio
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="500">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2">
-              <img
-                src="./static/cerco electrico.png"
-                alt="Cerco Eléctrico"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Cerco Eléctrico</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Implementación de sistema de seguridad perimetral
-                </p>
-              </div>
+              class="relative bg-white rounded-xl shadow-lg p-8 transition transform duration-300 hover:-translate-y-2 text-center"
+            >
+              <p class="text-gray-600 text-lg">
+                Combinamos innovación, calidad y un servicio inigualable para ofrecerte soluciones tecnológicas y de ingeniería que realmente marcan la diferencia. Nuestra misión es construir relaciones duraderas con nuestros clientes, basadas en la confianza y resultados excepcionales.
+              </p>
             </div>
           </div>
         </div>
-        <p>
-          
-        </p>
+      </section>
+      <section class="py-16 text-center">
+        <div class="relative group inline-block">
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"
+          ></span>
+          <a
+            href="main.html"
+            class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold rounded-full transition transform duration-300 hover:-translate-y-2 group-hover:text-gray-200"
+          >
+            Haz clic aquí para conocer nuestros proyectos
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer id="contacto" class="teal-gradient text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Prolizard SpA</h3>
+          <p class="text-gray-300">
+            Soluciones de Ingeniería y Tecnología en la Región de Coquimbo, Chile.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+          <ul class="space-y-2">
+            <li><a href="politicas.html" class="hover:text-cyan-200 transition duration-300">Política de Privacidad</a></li>
+            <li><a href="contactanos.html" class="hover:text-cyan-200 transition duration-300">Solicitar Cotización</a></li>
+          </ul>
+        </div>
+        <div class="md:text-right">
+          <h3 class="text-xl font-bold mb-4">Contáctanos</h3>
+          <p class="text-gray-300 mb-2">
+            San Antonio 529, Ovalle, Región de Coquimbo
+          </p>
+          <p class="text-gray-300 mb-2">+56 9 5399 4600</p>
+          <a href="mailto:cotizaciones.prolizardspa@gmail.com" class="hover:text-cyan-200 transition duration-300"
+            >cotizaciones.prolizardspa@gmail.com</a
+          >
+          <div class="mt-4 flex space-x-4 md:justify-end">
+            <a
+              href="https://www.facebook.com/share/19qT2eNSBY/"
+              class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-facebook"
+              target="_blank"
+            >
+              <i data-feather="facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/prolizard.cl?igsh=Y251Ym53ODNxdHY4"
+              class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-instagram"
+              target="_blank"
+            >
+              <i data-feather="instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/56953994600?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios."
+              class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-whatsapp"
+              target="_blank"
+            >
+              <i data-feather="message-circle"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <footer
-      id="contacto"
-      class="teal-gradient text-white py-12 px-4 sm:px-6 lg:px-8"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8">
-          <div data-aos="fade-right" class="text-center">
-            <h3 class="text-xl font-bold mb-4">Sucursal</h3>
-            <li class="flex items-center justify-center">
-              <i data-feather="map-pin" class="mr-2"></i>
-              <p class="text-white/90">Región de Coquimbo, Chile</p>
-            </li>
-          </div>
-          <div data-aos="fade-up" class="text-center">
-            <h3 class="text-xl font-bold mb-4">Contáctanos</h3>
-            <ul class="space-y-2 inline-block text-left">
-              <li class="flex items-center justify-start">
-                <i data-feather="mail" class="mr-2"></i> prolizardst@gmail.com
-              </li>
-              <li class="flex items-center justify-start">
-                <i data-feather="phone" class="mr-2"></i>+56 9 79656543
-              </li>
-              <li class="flex items-center justify-start">
-                <i data-feather="phone" class="mr-2"></i>+56 9 53994600
-              </li>
-              <li class="flex items-center justify-start">
-                <i data-feather="phone" class="mr-2"></i>+56 9 53595968
-              </li>
-            </ul>
-          </div>
-          <div data-aos="fade-left" class="text-center">
-            <h3 class="text-xl font-bold mb-4">Síguenos</h3>
-            <div class="flex space-x-4 justify-center">
-              <a
-                href="https://www.facebook.com/share/19qT2eNSBY/"
-                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-facebook"
-                target="_blank"
-              >
-                <i data-feather="facebook"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/prolizard.cl?igsh=Y251Ym53ODNxdHY4"
-                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-instagram"
-                target="_blank"
-              >
-                <i data-feather="instagram"></i>
-              </a>
-              <a
-                href="https://wa.me/56953595968?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios."
-                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-whatsapp"
-                target="_blank"
-              >
-                <i data-feather="message-circle"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="border-t border-white/20 mt-8 pt-8 text-center text-white/80"
-        >
-          <p>© 2023 PROLIZARD SpA ®</p>
-        </div>
+      <div
+        class="border-t border-white/20 mt-8 pt-8 text-center text-white/80"
+      >
+        <p>© 2023 PROLIZARD SpA ®</p>
       </div>
     </footer>
-
     <script>
       AOS.init({
         duration: 800,
