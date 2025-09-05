@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prolizard SpA | Política de Privacidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #fafafa;
+      }
+      .teal-gradient {
+        background: linear-gradient(135deg, #013939 0%, #013939 100%);
+      }
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #00ced1;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover:after {
+        width: 100%;
+      }
+
+      .hover-facebook:hover {
+        background-color: #1877f2;
+        color: white;
+      }
+      .hover-instagram:hover {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        color: white;
+      }
+      .hover-linkedin:hover {
+        background-color: #0a66c2;
+        color: white;
+      }
+      .hover-whatsapp:hover {
+        background-color: #25d366;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gray-50 text-gray-800 font-sans antialiased">
+    <header class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <nav
+          class="teal-gradient text-white py-4 px-6 rounded-full shadow-lg flex items-center justify-between"
+        >
+          <div class="flex items-center">
+            <a href="/main" class="flex items-center space-x-2">
+              <img
+                src="static/logopng092025.png"
+                alt="Logo de Prolizard SpA"
+                class="h-20 w-15"
+              />
+              <span class="text-xl font-bold text-white">PROLIZARD SpA</span>
+            </a>
+          </div>
+          <div class="hidden md:block relative group">
+            <span
+              class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"
+            ></span>
+            <a
+              href="https://wa.me/56979656543?text=Hola,%20tengo%20una%20emergencia%20y%20necesito%20ayuda."
+              class="relative inline-block bg-yellow-500 text-white font-bold py-2 px-4 rounded-full transition transform duration-300 hover:-translate-y-2"
+              target="_blank"
+            >
+              ¡EMERGENCIAS!
+            </a>
+          </div>
+          <button id="menu-toggle" class="md:hidden">
+            <i data-feather="menu" class="h-6 w-6 text-black"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8 max-w-4xl">
+      <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+        <div class="text-right mb-6 text-sm text-gray-500">
+          Última actualización:
+          <span id="last-updated"></span>
+        </div>
+
+        <article class="prose prose-indigo max-w-none">
+          <section id="introduction" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">1. Introducción</h2>
+            <p>
+              Nos tomamos muy en serio la privacidad de nuestros usuarios. Esta
+              política explica cómo recopilamos, usamos, compartimos y
+              protegemos su información personal.
+            </p>
+          </section>
+
+          <section id="data-collection" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">
+              2. Datos que Recopilamos
+            </h2>
+            <p>Podemos recopilar los siguientes tipos de información:</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>
+                Información de contacto (nombre, correo electrónico, teléfono)
+              </li>
+              <li>Datos de registro y cuenta</li>
+              <li>Información de transacciones</li>
+              <li>Datos técnicos (dirección IP, tipo de navegador)</li>
+              <li>Uso y preferencias</li>
+            </ul>
+          </section>
+
+          <section id="data-use" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">3. Uso de los Datos</h2>
+            <p>Utilizamos sus datos para:</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Proveer y mejorar nuestros servicios</li>
+              <li>Personalizar su experiencia</li>
+              <li>Comunicarnos con usted</li>
+              <li>Cumplir con obligaciones legales</li>
+            </ul>
+          </section>
+
+          <section id="data-sharing" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">4. Compartir Datos</h2>
+            <p>
+              No vendemos sus datos personales. Podemos compartir información
+              con:
+            </p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Proveedores de servicios autorizados</li>
+              <li>Autoridades legales cuando sea requerido</li>
+              <li>En caso de fusión o adquisición</li>
+            </ul>
+          </section>
+
+          <section id="data-security" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">5. Seguridad de Datos</h2>
+            <p>
+              Implementamos medidas técnicas y organizativas para proteger sus
+              datos, incluyendo:
+            </p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Encriptación de datos</li>
+              <li>Control de acceso</li>
+              <li>Procedimientos de seguridad</li>
+            </ul>
+          </section>
+
+          <section id="user-rights" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">6. Sus Derechos</h2>
+            <p>Usted tiene derecho a:</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Acceder a sus datos personales</li>
+              <li>Solicitar corrección o eliminación</li>
+              <li>Oponerse al procesamiento</li>
+              <li>Solicitar limitación del procesamiento</li>
+              <li>Presentar una reclamación</li>
+            </ul>
+          </section>
+
+          <section id="cookies" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">
+              7. Cookies y Tecnologías Similares
+            </h2>
+            <p>
+              Utilizamos cookies para mejorar su experiencia. Puede gestionar
+              sus preferencias de cookies en la configuración de su navegador.
+            </p>
+          </section>
+
+          <section id="changes" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">
+              8. Cambios a esta Política
+            </h2>
+            <p>
+              Podemos actualizar esta política ocasionalmente. Le notificaremos
+              sobre cambios significativos.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2 class="text-2xl font-semibold mb-4">9. Contacto</h2>
+            <p>Para preguntas sobre esta política, contáctenos en:</p>
+            <address class="not-italic mt-2">
+              <i data-feather="mail" class="inline-block mr-2"></i>
+              prolizardst@gmail.com<br />
+              <i data-feather="map-pin" class="inline-block mr-2"></i> Región de
+              Coquimbo, Chile
+            </address>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer
+      id="contacto"
+      class="teal-gradient text-white py-12 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div data-aos="fade-right" class="text-center">
+            <h3 class="text-xl font-bold mb-4">Sucursal</h3>
+            <li class="flex items-center justify-center">
+              <i data-feather="map-pin" class="mr-2"></i>
+              <p class="text-white/90">Región de Coquimbo, Chile</p>
+            </li>
+          </div>
+          <div data-aos="fade-up" class="text-center">
+            <h3 class="text-xl font-bold mb-4">Contáctanos</h3>
+            <ul class="space-y-2 inline-block text-left">
+              <li class="flex items-center justify-start">
+                <i data-feather="mail" class="mr-2"></i> prolizardst@gmail.com
+              </li>
+              <li class="flex items-center justify-start">
+                <i data-feather="phone" class="mr-2"></i>+56 9 79656543
+              </li>
+              <li class="flex items-center justify-start">
+                <i data-feather="phone" class="mr-2"></i>+56 9 53994600
+              </li>
+              <li class="flex items-center justify-start">
+                <i data-feather="phone" class="mr-2"></i>+56 9 53595968
+              </li>
+            </ul>
+          </div>
+          <div data-aos="fade-left" class="text-center">
+            <h3 class="text-xl font-bold mb-4">Síguenos</h3>
+            <div class="flex space-x-4 justify-center">
+              <a
+                href="https://www.facebook.com/share/19qT2eNSBY/"
+                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-facebook"
+                target="_blank"
+              >
+                <i data-feather="facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/prolizard.cl?igsh=Y251Ym53ODNxdHY4"
+                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-instagram"
+                target="_blank"
+              >
+                <i data-feather="instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/56953994600?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios."
+                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-whatsapp"
+                target="_blank"
+              >
+                <i data-feather="message-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/20 mt-8 pt-8 text-center text-white/80"
+        >
+          <p>© 2023 PROLIZARD SpA ®</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+      feather.replace();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        document.getElementById("last-updated").textContent =
+          new Date().toLocaleDateString("es-ES", options);
+      });
+    </script>
+  </body>
+</html>

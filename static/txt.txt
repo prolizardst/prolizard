@@ -1,0 +1,7 @@
+source venv/Scripts/activate
+
+python app.py
+
+
+
+Si deseas más información o una cotización ,solo dejanos un mensaje!! tambien atendemos EMERGENCIAS!!
