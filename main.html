@@ -9,12 +9,32 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
       body {
         font-family: "Inter", sans-serif;
-        background-color: #fafafa;
+        /* Se ha quitado el background-color para que se vea el fondo desenfocado */
+      }
+      /* Clase para el fondo desenfocado */
+      .blurred-background {
+        background-image: url("fondoamarillo.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(3px); /* Ajusta el valor del desenfoque aquí (e.g., 2px, 4px) */
+        -webkit-filter: blur(3px); /* Para compatibilidad con navegadores Webkit */
       }
       .teal-gradient {
         background: linear-gradient(135deg, #013939 0%, #013939 100%);
@@ -54,7 +74,7 @@
       }
       .hover-linkedin:hover {
         background-color: #0a66c2;
-        color: white;
+        color: rgba(255, 255, 255, 0);
       }
       .hover-whatsapp:hover {
         background-color: #25d366;
@@ -64,10 +84,18 @@
         background-color: #ffeded; /* Naranja Pastel */
         transform: translateY(-8px);
       }
+      .button-glow:hover {
+        box-shadow: 0 0 15px 5px rgba(1, 57, 57, 0.75);
+      }
+      .button-glow:hover {
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+      }
     </style>
   </head>
   <body>
-    <header class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="blurred-background fixed inset-0 z-[-1] w-full h-full"></div>
+
+   <header class="py-12 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <nav
           class="teal-gradient text-white py-4 px-6 rounded-full shadow-lg flex items-center justify-between"
@@ -82,43 +110,9 @@
               <span class="text-xl font-bold text-white">PROLIZARD SpA</span>
             </a>
           </div>
-          <ul class="hidden md:flex space-x-8 text-white">
-            <li>
-              <a
-                href="#valores"
-                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2 group-hover:text-gray-200"
-              >
-                Nuestros Valores
-              </a>
-            </li>
-            <li>
-              <a
-                href="#servicios"
-                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2 group-hover:text-gray-200"
-              >
-                Servicios
-              </a>
-            </li>
-            <li>
-              <a
-                href="#galeria"
-                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2 group-hover:text-gray-200"
-              >
-                Galería
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contactanos"
-                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2 group-hover:text-gray-200"
-              >
-                Contáctanos
-              </a>
-            </li>
-          </ul>
           <div class="hidden md:block relative group">
             <span
-              class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-300"
+              class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-full blur opacity-0 group-hover:opacity-50 transition duration-300"
             ></span>
             <a
               href="https://wa.me/56979656543?text=Hola,%20quisiera%20pedir%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20de%20emergencia."
@@ -127,31 +121,89 @@
               ¡EMERGENCIAS!
             </a>
           </div>
+          <ul class="hidden md:flex space-x-8 text-white">
+            <li>
+              <a
+                href="#valores"
+                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2"
+              >
+                Nuestros Valores
+              </a>
+            </li>
+            <li>
+              <a
+                href="#servicios"
+                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2"
+              >
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a
+                href="#galeria"
+                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2"
+              >
+                Galería
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contactanos"
+                class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2"
+              >
+                Contáctanos
+              </a>
+            </li>
+          </ul>
           <button id="menu-toggle" class="md:hidden">
             <i data-feather="menu" class="h-6 w-6 text-white"></i>
           </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-[#013939] rounded-lg shadow-lg">
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 bg-[#013939] rounded-lg shadow-lg"
+        >
           <ul class="flex flex-col space-y-2 p-4 text-white">
             <li>
-              <a href="#valores" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Nuestros Valores</a>
-            </li>
-            <li>
-              <a href="#servicios" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Servicios</a>
-            </li>
-            <li>
-              <a href="#galeria" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Galería</a>
-            </li>
-            <li>
-              <a href="#contactanos" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Contáctanos</a>
+              <div class="relative group">
+                <span
+                  class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-full blur opacity-0 group-hover:opacity-50 transition duration-300"
+                ></span>
+                <a
+                  href="https://wa.me/56979656543?text=Hola,%20quisiera%20pedir%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20de%20emergencia."
+                  class="relative block w-full text-center py-2 rounded-full transition-colors duration-300 bg-red-600 hover:bg-red-800"
+                >
+                  ¡EMERGENCIAS!
+                </a>
+              </div>
             </li>
             <li>
               <a
-                href="https://wa.me/56979656543?text=Hola,%20quisiera%20pedir%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20de%20emergencia."
-                class="block w-full text-center py-2 rounded-full transition-colors duration-300 bg-red-600 hover:bg-red-800"
+                href="#valores"
+                class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300"
+                >Nuestros Valores</a
               >
-                ¡EMERGENCIAS!
-              </a>
+            </li>
+            <li>
+              <a
+                href="#servicios"
+                class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="#galeria"
+                class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300"
+                >Galería</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contactanos"
+                class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300"
+                >Contáctanos</a
+              >
             </li>
           </ul>
         </div>
@@ -160,19 +212,14 @@
             class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-prolizardDark mb-4"
           >
             <br />
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-lime-400"
-            >
-              Servicios Profesionales de Ingeniería, Tecnología y
-              Eléctricidad.
+            <span class="text-white">
+              Servicios Profesionales de Ingeniería, Tecnología y Eléctricidad.
             </span>
             <p>
               <br />
             </p>
           </h1>
-          <p
-            class="text-prolizardDark/80 text-lg sm:text-xl max-w-2xl mx-auto mb-8"
-          >
+          <p class="text-white text-lg sm:text-xl max-w-2xl mx-auto mb-8">
             Somos una empresa de Ingeniería y Tecnología que ofrece soluciones
             integrales de vanguardia en la Región de Coquimbo. Nos enfocamos en
             satisfacer las necesidades de condominios, pymes, edificios y
@@ -190,62 +237,123 @@
               href="contactanos.html"
               class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold text-sm rounded-full transition transform duration-300 hover:-translate-y-2 group-hover:text-gray-200"
             >
-              Si deseas más información o una cotización , solo dejanos un
-              mensaje!!
+              Si deseas más información o una cotización, solo déjanos un mensaje!!
             </a>
           </div>
         </div>
       </div>
     </header>
 
-    <section id="valores" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-center text-3xl font-bold text-gray-800 mb-12"
-          data-aos="fade-up"
+ <section id="valores" class="py-16 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <h2
+      class="text-center text-3xl font-bold text-white mb-12"
+      data-aos="fade-up"
+    >
+      Nuestros Valores
+    </h2>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center"
+    >
+      <div
+        class="relative group transition transform duration-300 hover:scale-105 h-full"
+      >
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-xl blur opacity-0 group-hover:opacity-50 transition duration-300"
+        ></div>
+        <div
+          class="relative bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between"
         >
-          Nuestros Valores
-        </h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="relative group" data-aos="fade-right">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div
-              class="relative bg-white rounded-xl shadow-lg p-8 transition transform duration-300 hover:-translate-y-2"
-            >
-              <h3 class="text-2xl font-bold mb-4 text-prolizardDark">Misión</h3>
-              <p class="text-gray-600">
-                Ser una empresa líder en ingeniería y tecnología en la Región de
-                Coquimbo, reconocida por nuestra excelencia operativa,
-                innovación y compromiso con el desarrollo sostenible.
-              </p>
-            </div>
+          <div>
+            <i
+              data-feather="award"
+              class="h-12 w-12 mx-auto mb-4 text-[#013939]"
+            ></i>
+            <h3 class="font-bold text-xl mb-2">Innovación Constante</h3>
           </div>
-          <div class="relative group" data-aos="fade-left">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div
-              class="relative bg-white rounded-xl shadow-lg p-8 transition transform duration-300 hover:-translate-y-2"
-            >
-              <h3 class="text-2xl font-bold mb-4 text-prolizardDark">Visión</h3>
-              <p class="text-gray-600">
-                Nos esforzamos por crear un futuro donde la tecnología y la
-                ingeniería converjan para ofrecer soluciones que no solo
-                satisfagan las necesidades actuales, sino que también anticipen
-                las futuras.
-              </p>
-            </div>
-          </div>
+          <p class="text-gray-600 text-sm flex-grow">
+            Lideramos la industria con tecnologías y métodos de trabajo
+            innovadores.
+          </p>
         </div>
       </div>
-    </section>
 
-    <section id="servicios" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div
+        class="relative group transition transform duration-300 hover:scale-105 h-full"
+      >
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-xl blur opacity-0 group-hover:opacity-50 transition duration-300"
+        ></div>
+        <div
+          class="relative bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between"
+        >
+          <div>
+            <i
+              data-feather="check-circle"
+              class="h-12 w-12 mx-auto mb-4 text-[#013939]"
+            ></i>
+            <h3 class="font-bold text-xl mb-2">Calidad Inigualable</h3>
+          </div>
+          <p class="text-gray-600 text-sm flex-grow">
+            Ofrecemos servicios de alta calidad, asegurando la excelencia en
+            cada proyecto.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="relative group transition transform duration-300 hover:scale-105 h-full"
+      >
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-xl blur opacity-0 group-hover:opacity-50 transition duration-300"
+        ></div>
+        <div
+          class="relative bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between"
+        >
+          <div>
+            <i
+              data-feather="users"
+              class="h-12 w-12 mx-auto mb-4 text-[#013939]"
+            ></i>
+            <h3 class="font-bold text-xl mb-2">Nuestro Compromiso</h3>
+          </div>
+          <p class="text-gray-600 text-sm flex-grow">
+            Construimos relaciones duraderas basadas en la confianza y el
+            servicio hacia nuestros clientes.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="relative group transition transform duration-300 hover:scale-105 h-full"
+      >
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-xl blur opacity-0 group-hover:opacity-50 transition duration-300"
+        ></div>
+        <div
+          class="relative bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between"
+        >
+          <div>
+            <i
+              data-feather="shield"
+              class="h-12 w-12 mx-auto mb-4 text-[#013939]"
+            ></i>
+            <h3 class="font-bold text-xl mb-2">Seguridad y Respaldo</h3>
+          </div>
+          <p class="text-gray-600 text-sm flex-grow">
+            Cada solución está diseñada para ser personal, confiable, segura y
+            garantizada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="servicios" class="py-16 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <h2
-          class="text-center text-3xl font-bold text-gray-800 mb-12"
+          class="text-center text-3xl font-bold text-white mb-12"
           data-aos="fade-up"
         >
           Nuestra experiencia se centra en los siguientes servicios
@@ -320,10 +428,10 @@
       </div>
     </section>
 
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <h2
-          class="text-center text-3xl font-bold text-gray-800 mb-12"
+          class="text-center text-3xl font-bold text-white mb-12"
           data-aos="fade-up"
         >
           Nuestros Servicios Especializados
@@ -338,7 +446,10 @@
             >
               <div class="flex items-center">
                 <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
+                  <i
+                    data-feather="check-circle"
+                    class="text-primary w-4 h-4"
+                  ></i>
                 </div>
                 <h3 class="font-medium text-gray-800 text-sm">
                   Instalaciones, soporte y mantenciones de TI
@@ -355,7 +466,10 @@
             >
               <div class="flex items-center">
                 <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
+                  <i
+                    data-feather="check-circle"
+                    class="text-primary w-4 h-4"
+                  ></i>
                 </div>
                 <h3 class="font-medium text-gray-800 text-sm">
                   Instalaciones, soporte y mantenciones de CCTV
@@ -372,7 +486,10 @@
             >
               <div class="flex items-center">
                 <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
+                  <i
+                    data-feather="check-circle"
+                    class="text-primary w-4 h-4"
+                  ></i>
                 </div>
                 <h3 class="font-medium text-gray-800 text-sm">
                   Mantenciones de ascensores
@@ -389,7 +506,10 @@
             >
               <div class="flex items-center">
                 <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
+                  <i
+                    data-feather="check-circle"
+                    class="text-primary w-4 h-4"
+                  ></i>
                 </div>
                 <h3 class="font-medium text-gray-800 text-sm">
                   Instalaciones, soporte y mantenciones de Circuitos eléctricos
@@ -406,7 +526,10 @@
             >
               <div class="flex items-center">
                 <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
+                  <i
+                    data-feather="check-circle"
+                    class="text-primary w-4 h-4"
+                  ></i>
                 </div>
                 <h3 class="font-medium text-gray-800 text-sm">
                   Instalaciones, soporte y mantenciones de Portones eléctricos
@@ -423,7 +546,10 @@
             >
               <div class="flex items-center">
                 <div class="bg-primary/10 p-2 rounded-full mr-3">
-                  <i data-feather="check-circle" class="text-primary w-4 h-4"></i>
+                  <i
+                    data-feather="check-circle"
+                    class="text-primary w-4 h-4"
+                  ></i>
                 </div>
                 <h3 class="font-medium text-gray-800 text-sm">
                   Instalaciones, soporte y mantenciones de Cercos eléctricos
@@ -435,147 +561,199 @@
       </div>
     </section>
 
-    <section id="galeria" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="galeria" class="py-16 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <h2
-          class="text-center text-3xl font-bold text-gray-800 mb-12"
+          class="text-center text-3xl font-bold text-white mb-12"
           data-aos="fade-up"
         >
           Nuestros Trabajos
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="relative group" data-aos="fade-up">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div
-              class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2"
-            >
-              <img
-                src="electricidad.png"
-                alt="Instalación Eléctrica"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">
-                  Instalación Eléctrica
-                </h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Sistema eléctrico completo para edificio comercial
-                </p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
+                ></div>
+                <div
+                  class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2 bg-white"
+                >
+                  <img
+                    src="electricidad.png"
+                    alt="Instalación Eléctrica"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">
+                      Instalación Eléctrica
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                      Sistema eléctrico completo para edificio comercial
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
+                ></div>
+                <div
+                  class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2 bg-white"
+                >
+                  <img
+                    src="cctv.png"
+                    alt="Sistema CCTV"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">Sistema CCTV</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                      Implementación de seguridad para complejo residencial
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
+                ></div>
+                <div
+                  class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2 bg-white"
+                >
+                  <img
+                    src="redes.png"
+                    alt="Redes Informáticas"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">
+                      Redes Informáticas
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                      Infraestructura de red para empresa tecnológica
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
+                ></div>
+                <div
+                  class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2 bg-white"
+                >
+                  <img
+                    src="portones.png"
+                    alt="Portón Automático"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">
+                      Portón Automático
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                      Instalación de sistema automatizado para condominio
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
+                ></div>
+                <div
+                  class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2 bg-white"
+                >
+                  <img
+                    src="asensores.png"
+                    alt="Mantención Ascensor"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">
+                      Mantención Ascensor
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                      Servicio de mantención preventiva para edificio
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
+                ></div>
+                <div
+                  class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2 bg-white"
+                >
+                  <img
+                    src="cerco electrico.png"
+                    alt="Cerco Eléctrico"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">Cerco Eléctrico</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                      Implementación de sistema de seguridad perimetral
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div
-              class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2"
-            >
-              <img
-                src="cctv.png"
-                alt="Sistema CCTV"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Sistema CCTV</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Implementación de seguridad para complejo residencial
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="200">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div
-              class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2"
-            >
-              <img
-                src="redes.png"
-                alt="Redes Informáticas"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Redes Informáticas</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Infraestructura de red para empresa tecnológica
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="300">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div
-              class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2"
-            >
-              <img
-                src="portones.png"
-                alt="Portón Automático"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Portón Automático</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Instalación de sistema automatizado para condominio
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="400">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div
-              class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2"
-            >
-              <img
-                src="asensores.png"
-                alt="Mantención Ascensor"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">
-                  Mantención Ascensor
-                </h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Servicio de mantención preventiva para edificio
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative group" data-aos="fade-up" data-aos-delay="500">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition duration-300"
-            ></div>
-            <div
-              class="relative gallery-item overflow-hidden rounded-lg shadow-md transition transform duration-300 hover:-translate-y-2"
-            >
-              <img
-                src="cerco electrico.png"
-                alt="Cerco Eléctrico"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 bg-white">
-                <h3 class="font-semibold text-gray-800">Cerco Eléctrico</h3>
-                <p class="text-sm text-gray-600 mt-1">
-                  Implementación de sistema de seguridad perimetral
-                </p>
-              </div>
-            </div>
-          </div>
+          <div class="swiper-pagination"></div>
+          <div
+            class="swiper-button-next text-gray-800 hover:text-[#013939] transition"
+          ></div>
+          <div
+            class="swiper-button-prev text-gray-800 hover:text-[#013939] transition"
+          ></div>
         </div>
       </div>
     </section>
 
-    <section
-      id="contactanos"
-      class="py-16 px-4 sm:px-6 lg:px-8 bg-white"
-    >
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        },
+      });
+    </script>
+
+    <section id="contactanos" class="py-16 px-4 sm:px-6 lg:px-8">
       <div class="relative group max-w-lg mx-auto">
         <span
           class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-xl blur opacity-50 group-hover:opacity-75 transition duration-300"
@@ -619,9 +797,9 @@
       </div>
     </section>
 
-    <footer
+  <footer
       id="contacto"
-      class="teal-gradient text-white py-12 px-4 sm:px-6 lg:px-8"
+      class="footer-bg-opacity text-white py-4 px-4 sm:px-6 lg:px-8"
     >
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-3 gap-8">
@@ -684,11 +862,11 @@
       feather.replace();
 
       // Script para el menú móvil
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-      menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
       });
     </script>
   </body>

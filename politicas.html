@@ -96,20 +96,11 @@
             <i data-feather="menu" class="h-6 w-6 text-white"></i>
           </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-[#013939] rounded-lg shadow-lg">
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 bg-[#013939] rounded-lg shadow-lg"
+        >
           <ul class="flex flex-col space-y-2 p-4 text-white">
-            <li>
-              <a href="main.html#valores" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Nuestros Valores</a>
-            </li>
-            <li>
-              <a href="main.html#servicios" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Servicios</a>
-            </li>
-            <li>
-              <a href="main.html#galeria" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Galería</a>
-            </li>
-            <li>
-              <a href="main.html#contactanos" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Contáctanos</a>
-            </li>
             <li>
               <a
                 href="https://wa.me/56979656543?text=Hola,%20quisiera%20pedir%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20de%20emergencia."
@@ -117,6 +108,34 @@
               >
                 ¡EMERGENCIAS!
               </a>
+            </li>
+            <li>
+              <a
+                href="main.html#valores"
+                class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300"
+                >Nuestros Valores</a
+              >
+            </li>
+            <li>
+              <a
+                href="main.html#servicios"
+                class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="main.html#galeria"
+                class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300"
+                >Galería</a
+              >
+            </li>
+            <li>
+              <a
+                href="main.html#contactanos"
+                class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300"
+                >Contáctanos</a
+              >
             </li>
           </ul>
         </div>
@@ -244,6 +263,7 @@
               <li class="flex items-center justify-start">
                 <i data-feather="mail" class="mr-2"></i> prolizardst@gmail.com
               </li>
+              </li>
             </ul>
           </div>
           <div data-aos="fade-left" class="text-center">
@@ -299,11 +319,14 @@
       feather.replace();
 
       // Script para el menú móvil
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
+      // Obtenemos los elementos del DOM por sus IDs.
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-      menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+      // Agregamos un 'event listener' para cuando el usuario hace clic en el botón del menú.
+      menuToggle.addEventListener("click", () => {
+        // Toggle (alternar) la clase 'hidden' para mostrar u ocultar el menú móvil.
+        mobileMenu.classList.toggle("hidden");
       });
     </script>
   </body>
