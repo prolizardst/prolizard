@@ -81,21 +81,45 @@
               <span class="text-xl font-bold text-white">PROLIZARD SpA</span>
             </a>
           </div>
-        <div class="hidden md:block relative group">
+          <div class="hidden md:block relative group">
             <span
-                class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-300"
+              class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-300"
             ></span>
             <a
-                href="https://wa.me/56979656543?text=Hola,%20quisiera%20pedir%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20de%20emergencia."
-                class="relative inline-block bg-yellow-500 text-white font-bold py-2 px-4 rounded-full transition transform duration-300 hover:-translate-y-2 hover:bg-red-600"
+              href="https://wa.me/56979656543?text=Hola,%20quisiera%20pedir%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20de%20emergencia."
+              class="relative inline-block bg-yellow-500 text-white font-bold py-2 px-4 rounded-full transition transform duration-300 hover:-translate-y-2 hover:bg-red-600"
             >
-                ¡EMERGENCIAS!
+              ¡EMERGENCIAS!
             </a>
-            </div>
+          </div>
           <button id="menu-toggle" class="md:hidden">
-            <i data-feather="menu" class="h-6 w-6 text-black"></i>
+            <i data-feather="menu" class="h-6 w-6 text-white"></i>
           </button>
         </nav>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-[#013939] rounded-lg shadow-lg">
+          <ul class="flex flex-col space-y-2 p-4 text-white">
+            <li>
+              <a href="main.html#valores" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Nuestros Valores</a>
+            </li>
+            <li>
+              <a href="main.html#servicios" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Servicios</a>
+            </li>
+            <li>
+              <a href="main.html#galeria" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Galería</a>
+            </li>
+            <li>
+              <a href="main.html#contactanos" class="block w-full text-center py-2 hover:bg-gray-700 rounded-md transition-colors duration-300">Contáctanos</a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/56979656543?text=Hola,%20quisiera%20pedir%20una%20cotizaci%C3%B3n%20para%20un%20servicio%20de%20emergencia."
+                class="block w-full text-center py-2 rounded-full transition-colors duration-300 bg-red-600 hover:bg-red-800"
+              >
+                ¡EMERGENCIAS!
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -220,7 +244,6 @@
               <li class="flex items-center justify-start">
                 <i data-feather="mail" class="mr-2"></i> prolizardst@gmail.com
               </li>
-              </li>
             </ul>
           </div>
           <div data-aos="fade-left" class="text-center">
@@ -274,6 +297,14 @@
           lastUpdated.toLocaleDateString("es-ES", options);
       });
       feather.replace();
+
+      // Script para el menú móvil
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
     </script>
   </body>
 </html>
