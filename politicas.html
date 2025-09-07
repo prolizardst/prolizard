@@ -68,6 +68,15 @@
         background-color: #25d366;
         color: white;
       }
+      .prose-invert h1,
+      .prose-invert h2,
+      .prose-invert h3,
+      .prose-invert p,
+      .prose-invert ul,
+      .prose-invert li,
+      .prose-invert a {
+        color: white;
+      }
     </style>
   </head>
   <body class="min-h-screen text-gray-800 font-sans antialiased">
@@ -148,13 +157,13 @@
     </header>
 
     <main class="flex-grow container mx-auto px-4 py-8 max-w-4xl">
-      <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+      <div class="bg-white/10 rounded-lg shadow-md p-6 md:p-8">
         <div class="text-right mb-6 text-sm text-gray-500">
           Última actualización:
           <span id="last-updated"></span>
         </div>
 
-        <article class="prose prose-indigo max-w-none">
+        <article class="prose prose-indigo prose-invert max-w-none">
           <section id="introduction" class="mb-8">
             <h2 class="text-2xl font-semibold mb-4">1. Introducción</h2>
             <p>
