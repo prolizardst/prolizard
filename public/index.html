@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prolizard SpA | Tecnología e Ingeniería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        /* Se ha quitado el background-image y filter del body */
+      }
+      /* Clase para el fondo desenfocado */
+      .blurred-background {
+        background-image: url("fondoamarillo.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+      }
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .footer-bg-opacity {
+        background-color: rgba(255, 255, 255, 0);
+      }
+      .hover-facebook:hover {
+        background-color: #1877f2;
+        color: white;
+      }
+      .hover-instagram:hover {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        color: white;
+      }
+      .hover-linkedin:hover {
+        background-color: #0a66c2;
+        color: white;
+      }
+      .hover-whatsapp:hover {
+        background-color: #25d366;
+        color: white;
+      }
+      /* NUEVA CLASE: EFECTO DE RESPLANDOR PARA LAS TARJETAS */
+      .card-glow {
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      .card-glow:hover {
+        /* Sombra con resplandor usando el color base del footer, ajustando la opacidad para el brillo */
+        box-shadow: 0 0 15px 5px rgba(0, 51, 37, 0.75);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <div
+      class="blurred-background fixed inset-0 z-[-1] w-full h-full"
+    ></div>
+
+    <header class="py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto text-center">
+        <a href="main.html" class="flex flex-col items-center space-y-4">
+          <img
+            src="logopng092025.webp"
+            alt="Logo de Prolizard SpA"
+            class="h-24 md:h-48 w-auto"
+          />
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-['Montserrat']"
+          >
+            PROLIZARD SpA
+          </h1>
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <section id="quienes-somos" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-12 font-['Montserrat']"
+          >
+            Quiénes Somos
+          </h2>
+          <p class="text-white/80 mb-12 max-w-2xl mx-auto">
+           Prolizard SpA es la confluencia de la ingeniería y la tecnología. Somos arquitectos de soluciones, dedicados a diseñar e implementar sistemas inteligentes que optimizan el rendimiento y garantizan la seguridad. Con un enfoque en la innovación, nuestra misión es entregar resultados que superen las expectativas y establezcan nuevos estándares en la industria.
+          </p>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left"
+          >
+            <div
+              class="bg-white/10 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105 card-glow"
+            >
+              <i
+                data-feather="trending-up"
+                class="text-lime-400 mb-4 w-12 h-12"
+              ></i>
+              <h3 class="text-2xl font-bold text-white mb-2">Nuestra Misión</h3>
+              <p class="text-white/80">
+                Ofrecer soluciones de ingeniería y tecnología que optimicen los
+                procesos y generen un impacto positivo en nuestros clientes.
+              </p>
+            </div>
+
+            <div
+              class="bg-white/10 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105 card-glow"
+            >
+              <i
+                data-feather="eye"
+                class="text-cyan-500 mb-4 w-12 h-12"
+              ></i>
+              <h3 class="text-2xl font-bold text-white mb-2">Nuestra Visión</h3>
+              <p class="text-white/80">
+                Ser líderes en innovación tecnológica, reconocidos por nuestra
+                capacidad para resolver desafíos complejos y construir un futuro
+                más eficiente.
+              </p>
+            </div>
+
+            <div
+              class="bg-white/10 rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105 card-glow"
+            >
+              <i
+                data-feather="users"
+                class="text-gray-400 mb-4 w-12 h-12"
+              ></i>
+              <h3 class="text-2xl font-bold text-white mb-2">Nuestro Equipo</h3>
+              <p class="text-white/80">
+                Contamos con un equipo de expertos apasionados y altamente
+                calificados, comprometidos con la excelencia y el desarrollo de
+                proyectos de vanguardia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="servicios" class="py-16 px-4 sm:px-6 lg:px-8"></section>
+
+      <section class="py-16 text-center">
+        <div class="relative group inline-block">
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-lime-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"
+          ></span>
+          <a
+            href="main.html"
+            class="relative inline-block bg-[#013939] text-white px-8 py-4 font-bold rounded-full transition transform duration-300 hover:-translate-y-2 group-hover:text-gray-200"
+          >
+            Haz clic aquí para conocer nuestros proyectos
+          </a>
+        </div>
+      </section>
+    </main>
+
+  <footer
+      id="contacto"
+      class="footer-bg-opacity text-white py-4 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div data-aos="fade-right" class="text-center">
+            <h3 class="text-xl font-bold mb-4">Sucursal</h3>
+            <li class="flex items-center justify-center">
+              <i data-feather="map-pin" class="mr-2"></i>
+              <p class="text-white/90">Región de Coquimbo, Chile</p>
+            </li>
+          </div>
+          <div data-aos="fade-up" class="text-center">
+            <h3 class="text-xl font-bold mb-4">Contacto</h3>
+            <ul class="space-y-2 inline-block text-left">
+              <li class="flex items-center justify-start">
+                <i data-feather="mail" class="mr-2"></i> prolizardst@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div data-aos="fade-left" class="text-center">
+            <h3 class="text-xl font-bold mb-4">Síguenos</h3>
+            <div class="flex space-x-4 justify-center">
+              <a
+                href="https://www.facebook.com/share/19qT2eNSBY/"
+                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-facebook"
+                target="_blank"
+              >
+                <i data-feather="facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/prolizard.cl?igsh=Y251Ym53ODNxdHY4"
+                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-instagram"
+                target="_blank"
+              >
+                <i data-feather="instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/56953595968?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios."
+                class="contact-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition transform duration-300 hover:-translate-y-1 hover-whatsapp"
+                target="_blank"
+              >
+                <i data-feather="message-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/20 mt-8 pt-8 text-center text-white/80"
+        >
+          <p>© 2023 PROLIZARD SpA ®</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+      feather.replace();
+    </script>
+  </body>
+</html>
